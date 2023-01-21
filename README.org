@@ -1,0 +1,20 @@
+#+title: My zsh dotfiles
+
+That is configuration taken from [[https://github.com/ChristianChiarulli/Machfiles][chris@machine]], heavily modified, but still.
+
+This can be installed using stow. Just clone the repo somewhere and:
+
+#+begin_src sh
+stow /path/to/zshrc/ -t ~ zsh
+#+end_src
+
+*NOTE*: I don't intend on maintaining this repository, so that's a snapshot of
+my zsh configuration frozen in time.
+
+*** Dependencies
+- Zoxide
+- Fzf
+- powerlevel10k
+- Nerd font
+
+I might be missing something.
