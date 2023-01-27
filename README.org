@@ -14,7 +14,6 @@ my zsh configuration frozen in time.
 *** Dependencies
 - Zoxide
 - Fzf
-- powerlevel10k
 - Nerd font
 
 I might be missing something.

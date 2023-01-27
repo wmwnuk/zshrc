@@ -5,9 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#!/bin/sh
 export ZDOTDIR=$HOME/.config/zsh
-#source "$HOME/.profile"
 HISTFILE=~/.zsh_history
 SAVEHIST=20000
 setopt append_history
@@ -43,8 +41,8 @@ autoload -Uz colors && colors
 source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
-zsh_add_file "zsh-vim-mode"
-bindkey -v
+# zsh_add_file "zsh-vim-mode"
+bindkey -e
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 zsh_add_file "zsh-completions"
@@ -76,12 +74,11 @@ source "$HOME/.aliases"
 donormalexitmoron() {exit}
 zle -N donormalexitmoron
 
-bindkey "^D" donormalexitmoron
+bindkey  "^D"     donormalexitmoron
 
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
-
-#[ $TERM = "dumb" ] || pfetch
+bindkey  "^[[3~"  delete-char
 
 # To customize prompt, run `p10k configure` or edit ~/Projects/dotfiles/zsh/.config/zsh/.p10k.zsh.
-[[ ! -f ~/Projects/dotfiles/zsh/.config/zsh/.p10k.zsh ]] || source ~/Projects/dotfiles/zsh/.config/zsh/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

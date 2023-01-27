@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 ## autoload vcs and colors
 # autoload -Uz vcs_info
@@ -38,4 +38,8 @@
 # https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 # also ascii escape codes
 
-[ $TERM = "dumb" ] && unsetopt zle && PS1='$ ' || source ~/.local/share/powerlevel10k/powerlevel10k.zsh-theme
+if [ $TERM = "dumb" ]; then
+    unsetopt zle && PS1='$ '
+else
+    zsh_add_plugin "romkatv/powerlevel10k"
+fi

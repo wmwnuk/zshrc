@@ -14,8 +14,8 @@ alias top=btop htop=btop
 alias apt="doas nala"
 alias du=dust
 alias ps=procs
-alias cd=z
+alias cd=zi
 alias ssh="TERM=xterm-256color ssh"
-alias nnn="nnn -a -Pp"
+alias nnn="nnn -a -H -Pp"
 alias vim=nvim vi=vim v=vi
 alias magento-cloud='TERM=xterm-256color magento-cloud'
